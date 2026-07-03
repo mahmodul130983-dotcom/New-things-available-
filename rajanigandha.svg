@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 400">
+
+<rect
+x="72"
+y="70"
+width="6"
+height="300"
+fill="#2e7d32"/>
+
+<g fill="#ffffff">
+
+<circle cx="75" cy="60" r="10"/>
+
+<circle cx="60" cy="80" r="9"/>
+
+<circle cx="90" cy="95" r="9"/>
+
+<circle cx="60" cy="120" r="9"/>
+
+<circle cx="90" cy="140" r="9"/>
+
+<circle cx="60" cy="170" r="9"/>
+
+<circle cx="90" cy="190" r="9"/>
+
+<circle cx="60" cy="220" r="9"/>
+
+<circle cx="90" cy="245" r="9"/>
+
+<circle cx="75" cy="275" r="10"/>
+
+</g>
+
+<ellipse
+cx="55"
+cy="180"
+rx="22"
+ry="8"
+fill="#43a047"
+transform="rotate(-30 55 180)"/>
+
+<ellipse
+cx="95"
+cy="220"
+rx="22"
+ry="8"
+fill="#43a047"
+transform="rotate(30 95 220)"/>
+
+</svg>
