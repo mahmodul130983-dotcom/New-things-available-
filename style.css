@@ -1,0 +1,845 @@
+/* ===========================
+   FOR SUMU ❤️
+   STYLE.CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#040714;
+    color:white;
+}
+
+/* =======================
+BACKGROUND
+======================= */
+
+body{
+    background:
+    radial-gradient(circle at top,#16213e 0%,#0d1327 35%,#02040d 100%);
+}
+
+/* Moon */
+
+.moon{
+
+position:absolute;
+
+top:70px;
+
+right:100px;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+
+0 0 25px white,
+
+0 0 60px white,
+
+0 0 120px white;
+
+z-index:2;
+
+}
+
+/* Glow */
+
+.background-glow{
+
+position:absolute;
+
+left:50%;
+
+top:40%;
+
+transform:translate(-50%,-50%);
+
+width:600px;
+
+height:600px;
+
+border-radius:50%;
+
+background:rgba(0,255,180,.08);
+
+filter:blur(120px);
+
+animation:glow 8s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+transform:translate(-50%,-50%) scale(.9);
+
+}
+
+to{
+
+transform:translate(-50%,-50%) scale(1.2);
+
+}
+
+}
+
+/* =======================
+STARS
+======================= */
+
+.stars{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:45px 45px;
+
+animation:starsMove 80s linear infinite;
+
+opacity:.7;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-1200px);
+
+}
+
+}
+
+/* =======================
+FIREFLIES
+======================= */
+
+.fireflies{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.fireflies::before{
+
+content:"";
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+background:#fff176;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 15px #fff176,
+
+0 0 30px #ffee58;
+
+animation:fly 14s linear infinite;
+
+left:10%;
+
+top:90%;
+
+}
+
+@keyframes fly{
+
+0%{
+
+transform:translate(0,0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translate(400px,-300px);
+
+}
+
+100%{
+
+transform:translate(800px,-700px);
+
+opacity:0;
+
+}
+
+}
+
+/* =======================
+GARDEN
+======================= */
+
+.garden{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+overflow:hidden;
+
+}
+
+/* Grass */
+
+.grass{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+height:220px;
+
+background:
+
+linear-gradient(
+
+#245d28,
+
+#2d7a36,
+
+#19491d
+
+);
+
+clip-path:polygon(
+
+0 100%,
+
+2% 82%,
+
+4% 100%,
+
+6% 75%,
+
+8% 100%,
+
+10% 82%,
+
+12% 100%,
+
+100% 100%
+
+);
+
+}
+
+/* =======================
+FLOWERS
+======================= */
+
+.flower-area{
+
+position:absolute;
+
+bottom:150px;
+
+width:100%;
+
+height:400px;
+
+}
+
+/* Lily */
+
+.lily{
+
+position:absolute;
+
+width:18px;
+
+height:160px;
+
+background:#4caf50;
+
+border-radius:20px;
+
+transform-origin:bottom;
+
+animation:sway 5s ease-in-out infinite;
+
+}
+
+.lily::before{
+
+content:"🌸";
+
+position:absolute;
+
+font-size:50px;
+
+top:-45px;
+
+left:-16px;
+
+filter:drop-shadow(0 0 12px white);
+
+animation:bloom 3s ease forwards;
+
+}
+
+/* Rajanigandha */
+
+.rajanigandha{
+
+position:absolute;
+
+width:12px;
+
+height:190px;
+
+background:#81c784;
+
+animation:sway 6s infinite;
+
+}
+
+.rajanigandha::before{
+
+content:"🤍";
+
+position:absolute;
+
+top:-12px;
+
+left:-7px;
+
+font-size:22px;
+
+text-shadow:
+
+0 0 10px white;
+
+}
+
+/* Positions */
+
+.lily1{left:10%;}
+.lily2{left:32%;}
+.lily3{left:58%;}
+.lily4{left:82%;}
+
+.r1{left:20%;}
+.r2{left:43%;}
+.r3{left:67%;}
+.r4{left:90%;}
+
+/* =======================
+ANIMATIONS
+======================= */
+
+@keyframes sway{
+
+0%{
+
+transform:rotate(-2deg);
+
+}
+
+50%{
+
+transform:rotate(3deg);
+
+}
+
+100%{
+
+transform:rotate(-2deg);
+
+}
+
+}
+
+@keyframes bloom{
+
+0%{
+
+opacity:0;
+
+transform:scale(.2);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/* =======================
+TITLE
+======================= */
+
+.title{
+
+position:absolute;
+
+top:22%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+z-index:10;
+
+}
+
+.title h1{
+
+font-size:65px;
+
+text-shadow:
+
+0 0 20px white,
+
+0 0 50px #ff80ab;
+
+}
+
+.title span{
+
+color:#ffb6d9;
+
+}
+
+.title p{
+
+margin-top:20px;
+
+font-size:22px;
+
+color:#eeeeee;
+
+}
+/* ===========================
+   LEAVES
+=========================== */
+
+.lily::after{
+    content:"";
+    position:absolute;
+    width:35px;
+    height:16px;
+    background:#2ecc71;
+    border-radius:0 100% 0 100%;
+    left:-28px;
+    top:45px;
+    transform:rotate(-35deg);
+}
+
+.rajanigandha::after{
+    content:"";
+    position:absolute;
+    width:30px;
+    height:14px;
+    background:#43a047;
+    border-radius:100% 0 100% 0;
+    right:-24px;
+    top:70px;
+    transform:rotate(30deg);
+}
+
+/* ===========================
+FLOWER GLOW
+=========================== */
+
+.lily::before{
+
+animation:
+
+bloom 3s ease,
+
+flowerGlow 3s infinite alternate;
+
+}
+
+.rajanigandha::before{
+
+animation:
+
+flowerGlow 2.5s infinite alternate;
+
+}
+
+@keyframes flowerGlow{
+
+from{
+
+filter:
+
+drop-shadow(0 0 5px white);
+
+}
+
+to{
+
+filter:
+
+drop-shadow(0 0 18px white)
+
+drop-shadow(0 0 40px pink);
+
+}
+
+}
+
+/* ===========================
+FLOATING HEARTS
+=========================== */
+
+.floating-hearts{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.floating-hearts span{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:28px;
+
+opacity:.7;
+
+animation:heartFloat linear infinite;
+
+}
+
+.floating-hearts span:nth-child(1){
+
+left:8%;
+
+animation-duration:12s;
+
+}
+
+.floating-hearts span:nth-child(2){
+
+left:25%;
+
+animation-duration:10s;
+
+}
+
+.floating-hearts span:nth-child(3){
+
+left:50%;
+
+animation-duration:15s;
+
+}
+
+.floating-hearts span:nth-child(4){
+
+left:72%;
+
+animation-duration:11s;
+
+}
+
+.floating-hearts span:nth-child(5){
+
+left:90%;
+
+animation-duration:13s;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+
+translateY(0)
+
+scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+rotate(360deg)
+
+scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+LETTER
+=========================== */
+
+.letter{
+
+padding:120px 10%;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#02040d,
+
+#08131d,
+
+#101d2f
+
+);
+
+}
+
+.letter h2{
+
+font-size:48px;
+
+text-align:center;
+
+margin-bottom:50px;
+
+color:#ffd6e7;
+
+text-shadow:
+
+0 0 20px pink;
+
+}
+
+.letter p{
+
+font-size:20px;
+
+line-height:2;
+
+margin-bottom:35px;
+
+color:#f5f5f5;
+
+text-align:justify;
+
+}
+
+/* ===========================
+SCROLL ANIMATION
+=========================== */
+
+.letter{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1.4s;
+
+}
+
+.letter.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ===========================
+LOADING SCREEN
+=========================== */
+
+.loading-screen{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:#000;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+animation:
+
+loadingHide 3s forwards;
+
+}
+
+.loading-screen h1{
+
+font-size:45px;
+
+color:white;
+
+letter-spacing:4px;
+
+}
+
+@keyframes loadingHide{
+
+0%{
+
+opacity:1;
+
+}
+
+90%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.title h1{
+
+font-size:38px;
+
+}
+
+.title p{
+
+font-size:17px;
+
+padding:0 20px;
+
+}
+
+.letter h2{
+
+font-size:30px;
+
+}
+
+.letter p{
+
+font-size:17px;
+
+}
+
+.moon{
+
+width:80px;
+
+height:80px;
+
+right:20px;
+
+top:30px;
+
+}
+
+}
